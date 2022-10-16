@@ -26,7 +26,6 @@ function getSeason(date) {
 
   let numberMonth = date.getMonth();
   let season = '';
-  if (date instanceof Date) {
    if (numberMonth == 11 || numberMonth <= 1) {
     season = 'winter';
    } else if (numberMonth > 1 && numberMonth <= 4) {
@@ -36,7 +35,6 @@ function getSeason(date) {
    } else if (numberMonth > 7 && numberMonth <= 10) {
     season = 'autumn';
    }
-  } else {throw new Error('Invalid date!')}  
   return season;
 }
 
